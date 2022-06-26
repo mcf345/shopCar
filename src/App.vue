@@ -2,7 +2,7 @@
   <div class="app">
     <MyHeader title="购物车案例" color="green"></MyHeader>
     <MyGoods v-for="item in goodsList" :key="item.goods_id" :goods="item"></MyGoods>
-    <MyFooter></MyFooter>
+    <MyFooter :goodsList="goodsList"></MyFooter>
   </div>
 </template>
 
@@ -36,6 +36,9 @@ export default {
 
 <style>
 .app {
+  box-sizing: border-box;
+  max-height: 100vh;
   padding: 50px 0;
+  overflow: auto;
 }
 </style>
